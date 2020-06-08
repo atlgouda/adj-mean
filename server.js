@@ -81,10 +81,35 @@ app.get("/api/vips", function(req, res) {
    */
   
   app.get("/api/vips/:id", function(req, res) {
+    db.collection(VIPS_COLLECTION).findOne({ _id: new ObjectID(req.params.id) }, function(err, doc) {
+      if (err) {
+        handleError(res, err.message, "Failed to get vip");
+      } else {
+        res.status(200).json(doc);
+      }
+    });
   });
   
   app.put("/api/vips/:id", function(req, res) {
+    var updateDoc = req.body;
+    delete updateDoc._id;
+  
+    db.collection(VIPS_COLLECTION).updateOne({_id: new ObjectID(req.params.id)}, updateDoc, function(err, doc) {
+      if (err) {
+        handleError(res, err.message, "Failed to update vip");
+      } else {
+        updateDoc._id = req.params.id;
+        res.status(200).json(updateDoc);
+      }
+    });
   });
   
   app.delete("/api/vips/:id", function(req, res) {
+    db.collection(VIPS_COLLECTION).deleteOne({_id: new ObjectID(req.params.id)}, function(err, result) {
+      if (err) {
+        handleError(res, err.message, "Failed to delete vip");
+      } else {
+        res.status(200).json(req.params.id);
+      }
+    });
   });
