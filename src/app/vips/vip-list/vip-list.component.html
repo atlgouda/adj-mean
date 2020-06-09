@@ -10,7 +10,7 @@
               <button type="button" class="btn btn-secondary" onclick="showOne('actor')">Actors</button>
               <button type="button" class="btn btn-secondary" onclick="showOne('athlete')">Athletes</button>
             </div>
-        <button (click)="toggleShow()" type="checkbox" >show/hide</button>
+        <!-- <button (click)="toggleShow()" type="checkbox" >show/hide</button> -->
         <vip-details *ngIf="isShown" [vip]="selectedVip" [createHandler]="addVip" [updateHandler]="updateVip"
             [deleteHandler]="deleteVip">
         </vip-details>
