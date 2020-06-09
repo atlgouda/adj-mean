@@ -44,7 +44,6 @@ export class VipListComponent implements OnInit {
       detail: '',
       reason: '',
       yt: ''
-      }
     };
 
     // By default, a newly-created vip will have the selected state.
