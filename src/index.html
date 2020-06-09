@@ -40,7 +40,7 @@
 
   </script>
   <script>
-    // $(document).ready(function () {
+    $(document).ready(function () {
     //   // $("#hidediv").click(function () {
     //   //   $(".details").hide();
     //   // });
@@ -49,11 +49,12 @@
     //     $(".details").show();
     //   });
     // });
-    $("#hidediv").on("click", function() {
-      $(".details").css("display", "none")
-    })
-    $("#showdiv").on("click", function() {
-      $(".details").css("display", "block")
+      $("#hidediv").on("click", function() {
+        $(".details").css("display", "none !important")
+      })
+      $("#showdiv").on("click", function() {
+        $(".details").css("display", "block !important")
+      })
     })
   </script>
 

@@ -102,3 +102,7 @@ margin-bottom: 25px;
     padding: .75rem;
     font-size: .8rem
 }
+
+.details {
+    display:block
+}
