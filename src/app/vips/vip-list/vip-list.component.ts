@@ -41,6 +41,14 @@ export class VipListComponent implements OnInit {
   this.isShown = ! this.isShown;
   }
 
+  showDiv() {
+    this.isShown = true
+  }
+
+  hideDiv() {
+    this.isShown= false
+  }
+
   selectVip(vip: Vip) {
     this.selectedVip = vip
   }
