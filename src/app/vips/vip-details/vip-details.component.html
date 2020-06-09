@@ -1,0 +1,34 @@
+<div *ngIf="vip" class="row">
+    <div class="col-md-12">
+      <h2 *ngIf="vip._id">Vip Details</h2>
+      <h2 *ngIf="!vip._id">New Vip</h2>
+    </div>
+  </div>
+  <div *ngIf="vip" class="row">
+    <form class="col-md-12">
+      <div class="form-group">
+        <label for="vip-name">Name</label>
+        <input class="form-control" name="vip-name" [(ngModel)]="vip.name" placeholder=""/>
+      </div>
+      <div class="form-group">
+        <label for="vip-occupation">Occupation Category</label>
+        <input class="form-control" name="vip-occupation" [(ngModel)]="vip.occupation" placeholder=""/>
+      </div>
+      <div class="form-group">
+        <label for="vip-detail">Team or Company</label>
+        <input class="form-control" name="vip-detail" [(ngModel)]="vip.detail" placeholder=""/>
+      </div>
+      <div class="form-group">
+        <label for="vip-reason">Accomplishment</label>
+        <input class="form-control" name="vip-reason" [(ngModel)]="vip.reason" placeholder=""/>
+      </div>
+      <div class="form-group">
+        <label for="vip-yt">URL of image/gif</label>
+        <input class="form-control" name="vip-yt" [(ngModel)]="vip.yt" placeholder=""/>
+      </div>
+      <button class="btn btn-primary" *ngIf="!vip._id" (click)="createVip(vip)">Create</button>
+      <button class="btn btn-info" *ngIf="vip._id" (click)="updateVip(vip)">Update</button>
+      <button class="btn btn-danger" *ngIf="vip._id" (click)="deleteVip(vip._id)">Delete</button>
+    </form>
+  </div>
+  
