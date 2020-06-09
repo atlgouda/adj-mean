@@ -39,32 +39,27 @@
     // })
 
   </script>
-  <script>
-    function showDiv() {
-      $('details').show()
-    }
+  <script type="text/javascript">
+    document.getElementById("alph").addEventListener("click", function(e) {
+      if(e.target && e.target.nodeName == "LI") {
+        console.log(e.target.id + " was clicked");
+      }
+    })
+
   </script>
   <script>
     $(document).ready(function () {
-    //   // $("#hidediv").click(function () {
-    //   //   $(".details").hide();
-    //   // });
-    //   $("li").click(function () {
-    //     console.log('show .details');
-    //     $(".details").show();
-    //   });
-    // });
-      $("#hidediv").on("click", function() {
-        $(".details").attr("style", "display: none !important")
-      });
-      $("#showdiv").on("click", function() {
-        console.log('clicked showdiv')
-        $(".details").attr("style", "display: block !important")
-      })
+
+      // $("#hidediv").on("click", function() {
+      //   $(".details").attr("style", "display: none !important")
+      // });
+      // $("#showdiv").on("click", function() {
+      //   console.log('clicked showdiv')
+      //   $(".details").attr("style", "display: block !important")
+      // })
     })
   </script>
 <!-- <script>
-
 var list, i, switching, b, shouldSwitch;
   list = document.getElementById("alph");
   switching = true;
