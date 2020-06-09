@@ -2,7 +2,8 @@
 <div class="row">
     <div class="col-md-5">
         <h5>Filter by Category:</h5>
-            <div class="btn-group" role="group" aria-label="Basic example" style="margin-bottom:10px; display:flex; flex-wrap:wrap">
+            
+            <div id="hidediv" class="btn-group" role="group" aria-label="Basic example" style="margin-bottom:10px; display:flex; flex-wrap:wrap">
               <button type="button" class="btn btn-secondary" onclick="showOne('business')">Business</button>
               <button type="button" class="btn btn-secondary" onclick="showOne('musician')">Musicians</button>
               <button type="button" class="btn btn-secondary" onclick="showOne('leader')">Politicial Leaders</button>
@@ -17,7 +18,7 @@
         <h2>VIPs</h2>
         <button class="btn btn-warning" style="margin: 10px 0" (click)="createNewVip()">New</button>
         <ul class="list-group">
-            <li class="list-group-item {{vip.occupation}} hide toggle" *ngFor="let vip of vips" (click)="selectVip(vip)"
+            <li id="showdiv" class="list-group-item {{vip.occupation}} hide" *ngFor="let vip of vips" (click)="selectVip(vip)"
                 [class.active]="vip === selectedVip">
                 {{vip.name}}
             </li>
