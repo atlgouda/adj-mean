@@ -1,0 +1,95 @@
+
+#topps61 .cardRow {
+    position:relative;
+    width:100%;
+    overflow:hidden;
+    text-align:center;
+    padding:100px 0px;
+  
+  }
+
+#topps61 #vip-card {
+width:250px;
+height:350px;
+background:LemonChiffon;
+position:relative; 
+display:inline-block;
+box-shadow:-20px 20px 5px rgba(0,0,0,.1);
+transition:1s;
+transform:rotateX(45deg) rotateZ(-35deg);
+opacity:1;  
+margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #topps61 #vip-card {
+        transition:0s;
+        transform: none;
+    }
+}
+/* topps 61 */
+
+#topps61 #vip-card {
+    perspective:750px;
+}
+
+#topps61 .photo {
+    background-size:cover !important;
+    background-position:45% 0% !important;
+    height:330px;
+    width:230px;
+    top:10px;
+    left:10px;
+    outline:3px solid black;
+    filter:saturate(.75) !important;
+}
+
+#topps61 .name {
+    font-family:'Arial', sans-serif;
+    font-size:13px;
+    font-weight:600;
+    text-align:center;
+    width:150px;
+    outline:3px solid black;
+    line-height:14px;
+    letter-spacing:1px;
+    position:absolute;
+    left:10px;
+    bottom:10px;
+    background:tomato;
+    color:white;
+    padding:5px 0px 5px 0px;
+}
+#topps61 .name2 {
+    font-family:sans-serif;
+    font-size:10px;
+    line-height:10px;
+    font-weight:600;
+    text-align:center;
+    padding:10px 0px 0px 0px;
+    outline:3px solid black;
+    position:absolute;
+    color:black;
+    background:yellow;
+    width:80px;
+    height:28px;
+    right:10px;
+    bottom:10px;
+}
+
+#topps61 #vip-card:hover {
+    transform:rotateX(0deg) rotateZ(0deg);
+    box-shadow:-5px 20px 5px rgba(0,0,0,.1);
+    opacity:1;
+}
+
+#topps61 #vip-card:hover > .shine {
+    animation:shine 1.5s linear forwards;
+    opacity:.5;
+}
+
+.card-body {
+    padding: .75rem;
+    font-size: .8rem
+}
