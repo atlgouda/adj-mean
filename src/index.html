@@ -40,6 +40,11 @@
 
   </script>
   <script>
+    function showDiv() {
+      $('details').show()
+    }
+  </script>
+  <script>
     $(document).ready(function () {
     //   // $("#hidediv").click(function () {
     //   //   $(".details").hide();
@@ -67,7 +72,7 @@ var list, i, switching, b, shouldSwitch;
   while (switching) {
     // start by saying: no switching is done:
     switching = false;
-    b = list.getElementsByTagName("LI");
+    b = list.getElementsByTagName("li");
     // Loop through all list-items:
     for (i = 0; i < (b.length - 1); i++) {
       // start by saying there should be no switching:
