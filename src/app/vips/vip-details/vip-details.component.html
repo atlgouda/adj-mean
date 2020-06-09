@@ -1,5 +1,5 @@
 <div *ngIf="vip" class="row">
-    <div *ngIf="vip._id">
+    <div *ngIf="vip._id" class="card-container">
         <div id="topps61" class="cardRow" style="padding-top: 20px">
             <div style="display: flex; justify-content: center">
                 <div id="vip-card" class="card" style="padding-top: 10px; padding-left: 10px">
@@ -12,11 +12,11 @@
         </div>
 
     <div class="col-md-12">
-      <h2 *ngIf="vip._id">VIP Details</h2>
+      <h2 *ngIf="vip._id" class="details-header">VIP Details</h2>
       <h2 *ngIf="!vip._id">New VIP</h2>
     </div>
   </div>
-  <div *ngIf="vip" class="row">
+  <div *ngIf="vip" class="row" id="form-div">
     <form class="col-md-12">
       <div class="form-group">
         <label for="vip-name">Name</label>

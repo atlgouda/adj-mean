@@ -26,6 +26,19 @@ margin-bottom: 25px;
         transition:0s;
         transform: none;
     }
+    .details-header {
+        text-align: center
+    }
+    .card-container {
+        margin: 0 auto;
+    }
+    #form-div {
+        width: 100%;
+        margin: 0 auto;
+    }
+    h2 {
+        margin-top: 10px
+    }
 }
 /* topps 61 */
 
