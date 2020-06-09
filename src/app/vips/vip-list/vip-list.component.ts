@@ -14,6 +14,7 @@ export class VipListComponent implements OnInit {
 
   vips: Vip[]
   selectedVip: Vip
+  isShown: boolean = true ;
 
   constructor(private vipService: VipService) { }
 
@@ -31,6 +32,13 @@ export class VipListComponent implements OnInit {
     return this.vips.findIndex((vip) => {
       return vip._id === vipId;
     });
+  }
+
+  
+
+
+  toggleShow() {
+  this.isShown = ! this.isShown;
   }
 
   selectVip(vip: Vip) {
