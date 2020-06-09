@@ -55,11 +55,11 @@
     //   });
     // });
       $("#hidediv").on("click", function() {
-        $(".details").css("display", "none !important")
+        $(".details").attr("style", "display: none !important")
       });
       $("#showdiv").on("click", function() {
         console.log('clicked showdiv')
-        $(".details").css("display", "block !important")
+        $(".details").attr("style", "display: block !important")
       })
     })
   </script>
