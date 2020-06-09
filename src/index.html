@@ -19,8 +19,15 @@
       function showOne(id) {
           $('.hide').show();
           $('.hide').not('.' + id).hide();
+          $('.toggle').hide();
           console.log("hide " + id)
+      };
+      $(document).ready(function() {
+        $('.toggle').click(function() {
+          $('.hide').show()
       }
+    )
+  })
     </script>
 </body>
 </html>
