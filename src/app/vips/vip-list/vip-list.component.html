@@ -18,7 +18,7 @@
         <h2>VIPs</h2>
         <button class="btn btn-warning" style="margin: 10px 0" (click)="createNewVip()">New</button>
         <ul class="list-group">
-            <li id="showdiv" class="list-group-item {{vip.occupation}} hide" *ngFor="let vip of vips" (click)="selectVip(vip)"
+            <li  class="list-group-item {{vip.occupation}} hide" *ngFor="let vip of vips" (click)="selectVip(vip)"
                 [class.active]="vip === selectedVip">
                 {{vip.name}}
             </li>
