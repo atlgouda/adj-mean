@@ -1,4 +1,8 @@
 <div *ngIf="vip" class="row">
+    <div *ngIf="vip.id">
+        <h2>Display Card</h2>
+    </div>
+
     <div class="col-md-12">
       <h2 *ngIf="vip._id">Vip Details</h2>
       <h2 *ngIf="!vip._id">New Vip</h2>
