@@ -16,7 +16,7 @@
     <div class="col-md-5 col-md-offset-2">
         <h2>VIPs</h2>
         <ul class="list-group">
-            <li class="list-group-item " *ngFor="let vip of vips" (click)="selectVip(vip)"
+            <li class="list-group-item {{vip.occupation}} hide" *ngFor="let vip of vips" (click)="selectVip(vip)"
                 [class.active]="vip === selectedVip">
                 {{vip.name}}
             </li>
