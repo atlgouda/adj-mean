@@ -41,6 +41,10 @@ export class VipListComponent implements OnInit {
   this.isShown = ! this.isShown;
   }
 
+  sortBy(prop: string) {
+    return this.vips.sort((a, b) => a[prop] > b[prop] ? 1 : a[prop] === b[prop] ? 0 : -1);
+  }
+
   showDiv() {
     this.isShown = true
   }
