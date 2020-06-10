@@ -45,14 +45,25 @@ export class VipListComponent implements OnInit {
     return this.vips.sort((a, b) => a[prop] > b[prop] ? 1 : a[prop] === b[prop] ? 0 : -1);
   }
 
-  showDiv() {
-    this.isShown = true;
-    console.log('showDiv()')
-  }
+  MyCtrl($scope) {
 
-  hideDiv() {
-    this.isShown= false
+    $scope.myvalue = false;
+  
+    $scope.showDet = function(){
+      $scope.myvalue = true;  
+    };
+    $scope.hideDet = function() {
+      $scope.myvalue = false;
+    }
   }
+  // showDiv() {
+  //   this.isShown = true;
+  //   console.log('showDiv()')
+  // }
+
+  // hideDiv() {
+  //   this.isShown= false
+  // }
 
   selectVip(vip: Vip) {
     this.selectedVip = vip
