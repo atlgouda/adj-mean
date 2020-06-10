@@ -46,7 +46,8 @@ export class VipListComponent implements OnInit {
   }
 
   showDiv() {
-    this.isShown = true
+    this.isShown = true;
+    console.log('showDiv()')
   }
 
   hideDiv() {
