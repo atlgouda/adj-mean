@@ -30,6 +30,10 @@
       $('.hide').not('.' + id).hide();
       // $('.details').hide();
       console.log("hide " + id)
+      $('html, body').animate({
+            scrollTop: $('html, body').height()
+        }, 'slow');
+    console.log('bottom-scroll')
     };
     //     $(document).ready(function() {
     //       $('.toggle').click(function() {
@@ -39,14 +43,7 @@
     // })
 
   </script>
-<script>
-$('.bottom-scroll').click(function () {
-  $('html, body').animate({
-            scrollTop: $('html, body').height()
-        }, 'slow');
-  console.log('bottom-scroll')
-})
-</script>
+
 <!-- <script>
 var list, i, switching, b, shouldSwitch;
   list = document.getElementById("alph");
