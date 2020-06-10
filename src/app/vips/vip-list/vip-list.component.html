@@ -1,17 +1,17 @@
-<!-- <div ng-controller="MyCtrl"> -->
+<div ng-controller="MyCtrl">
 <div class="row">
     <div class="col-md-5">
         <h5>Filter by Category:</h5>
             
             <div id="hidediv" class="btn-group" role="group" aria-label="Basic example" style="margin-bottom:10px; display:flex; flex-wrap:wrap">
-              <button type="button" class="btn btn-secondary" ng-click="myvalue=false" >Business</button>
+              <button type="button" class="btn btn-secondary" onclick="showOne('business')" >Business</button>
               <button type="button" class="btn btn-secondary" onclick="showOne('musician')">Musicians</button>
               <button type="button" class="btn btn-secondary" onclick="showOne('leader')">Politicial Leaders</button>
               <button type="button" class="btn btn-secondary" onclick="showOne('actor')">Actors</button>
               <button type="button" class="btn btn-secondary" onclick="showOne('athlete')">Athletes</button>
             </div>
         <!-- <button (click)="toggleShow()" type="checkbox" >show/hide</button> -->
-        <vip-details *ngIf="myvalue" [vip]="selectedVip" [createHandler]="addVip" [updateHandler]="updateVip"
+        <vip-details ng-show="myvalue" [vip]="selectedVip" [createHandler]="addVip" [updateHandler]="updateVip"
             [deleteHandler]="deleteVip">
         </vip-details>
     </div>
@@ -27,4 +27,4 @@
 
     </div>
 </div>
-<!-- </div> -->
+</div>
