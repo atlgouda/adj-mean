@@ -45,6 +45,9 @@ export class VipListComponent implements OnInit {
     return this.vips.sort((a, b) => a[prop] > b[prop] ? 1 : a[prop] === b[prop] ? 0 : -1);
   }
 
+  myCtrl($scope) {
+    $scope.advstatus = true;
+}
   // MyCtrl($scope) {
 
   //   $scope.myvalue = false;
