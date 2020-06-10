@@ -4,7 +4,7 @@
         <h5>Filter by Category:</h5>
             
             <div id="hidediv" class="btn-group" role="group" aria-label="Basic example" style="margin-bottom:10px; display:flex; flex-wrap:wrap">
-              <button type="button" class="btn btn-secondary" ng-click="hideDet()" >Business</button>
+              <button type="button" class="btn btn-secondary" ng-click="myvalue=false" >Business</button>
               <button type="button" class="btn btn-secondary" onclick="showOne('musician')">Musicians</button>
               <button type="button" class="btn btn-secondary" onclick="showOne('leader')">Politicial Leaders</button>
               <button type="button" class="btn btn-secondary" onclick="showOne('actor')">Actors</button>
@@ -17,7 +17,7 @@
     </div>
     <div class="col-md-5 col-md-offset-2 list-section">
         <h2>VIPs</h2>
-        <button class="btn btn-warning" style="margin: 10px 0" ngclick="createNewVip(); showDet()">New</button>
+        <button class="btn btn-warning" style="margin: 10px 0" ngclick="createNewVip(); myvalue=true">New</button>
         <ul id="alph" class="list-group">
             <li id="showdiv" class="list-group-item {{vip.occupation}} hide" *ngFor="let vip of sortBy('name')" (click)="selectVip(vip)"
                 [class.active]="vip === selectedVip">
