@@ -14,7 +14,7 @@ export class VipListComponent implements OnInit {
 
   vips: Vip[]
   selectedVip: Vip
-  isShown: boolean = false ;
+  isShown: boolean = true ;
 
   constructor(private vipService: VipService) { }
 

@@ -17,7 +17,7 @@
     </div>
     <div class="col-md-5 col-md-offset-2 list-section">
         <h2>VIPs</h2>
-        <button class="btn btn-warning" style="margin: 10px 0" ng-click="createNewVip(); showDiv()">New</button>
+        <button class="btn btn-warning" style="margin: 10px 0" onclick="createNewVip()">New</button>
         <ul id="alph" class="list-group">
             <li id="showdiv" class="list-group-item {{vip.occupation}} hide" *ngFor="let vip of sortBy('name')" (click)="selectVip(vip)"
                 [class.active]="vip === selectedVip">
