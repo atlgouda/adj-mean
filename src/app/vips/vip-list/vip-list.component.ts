@@ -14,8 +14,8 @@ export class VipListComponent implements OnInit {
 
   vips: Vip[]
   selectedVip: Vip
-  isShown: boolean = true ;
-
+  // isShown: boolean = true ;
+  myvalue: boolean=true;
   constructor(private vipService: VipService) { }
 
   ngOnInit() {
