@@ -27,13 +27,8 @@
     crossorigin="anonymous"></script>
   <script>
     function showOne(id) {
-      if ($(id === 'all')) {
-        $('.hide').show();
-      }
-      else {
-        $('.hide').show();
-        $('.hide').not('.' + id).hide();
-      }
+      $('.hide').show();
+      $('.hide').not('.' + id).hide();
       // $('.details').hide();
       console.log("hide " + id)
       let isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
